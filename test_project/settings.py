@@ -75,11 +75,16 @@ WSGI_APPLICATION = 'test_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'HOST': 'bardzowaznastrona.mysql.pythonanywhere-services.com',
+        'NAME': 'bardzowaznastron$test',
+        'ENGINE': 'mysql.connector.django',
+        'USER': 'bardzowaznastron',
+        'PASSWORD': 'MyRoot132',
+        'OPTIONS': {
+                    'autocommit': True,
+        },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
